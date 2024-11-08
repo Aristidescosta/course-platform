@@ -5,8 +5,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        text: "var(--color-text)",
+        error: "var(--color-error)",
+        paper: "var(--color-primary)",
+        primary: "var(--color-primary)",
+        background: "var(--color-background)",
+        'primary-contrast': "var(--color-primary-contrast)",
       },
     },
   },
