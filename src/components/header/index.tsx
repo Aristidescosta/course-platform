@@ -9,22 +9,28 @@ export const Header = () => {
 
     return (
         <header>
-            <nav className='flex items-center justify-center bg-primary py-4'>
+            <nav className='flex items-center gap-6 justify-start md:justify-center bg-primary py-2 sm:py-4 px-6'>
+                <button className='sm:hidden'>
+                    icon
+                </button>
                 <ul className='flex gap-4'>
                     <li>
-                        <Link className='border border-2 rounded-md p-2 font-bold hover:no-underline' href={"/"}>CODARSE</Link>
+                        <Link className='border-2 rounded-md p-1 font-bold hover:no-underline' href={"/"}>CODARSE</Link>
                     </li>
-                    <li>
+                    <li className='hidden sm:block'>
                         <Link href={"/"} data-active={currentPath === "/"} className='data-[active=true]:underline' >Página inicial</Link>
                     </li>
-                    <li>
+                    <li className='hidden sm:block'>
                         <Link href={"/cursos"} data-active={currentPath === "/cursos"} className='data-[active=true]:underline'>Cursos</Link>
                     </li>
-                    <li className='flex gap-1 items-center'>
-                        <Link href={"https://blog.codarse.com"} target='_blank'>Blog</Link>
-
+                    <li className='hidden sm:block'>
+                        <Link href={"https://blog.codarse.com"} target='_blank' className='flex gap-1 items-center'>
+                            Blog
+                            B
+                        </Link>
                     </li>
                 </ul>
+                <h1 className='sm:hidden'>CodarSe - Página Inicial</h1>
             </nav>
         </header>
     );
