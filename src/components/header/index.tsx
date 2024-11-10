@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
+import { MdDehaze, MdOpenInNew } from 'react-icons/md';
 
 export const Header = () => {
     const [title, setTitle] = useState("CodarSe");
@@ -17,26 +18,37 @@ export const Header = () => {
         onClose();
     }, [currentPath]);
 
+    useEffect(() => {
+        const handle = (e: KeyboardEvent) => {
+            if (e.key === "Escape") onClose();
+        };
+
+        window.addEventListener("keydown", handle);
+
+        // Limpe o ouvinte de eventos quando o componente for desmontado
+        return () => window.removeEventListener("keydown", handle);
+    }, []);
+
     return (
         <header>
-            <nav className='flex items-center gap-6 justify-start md:justify-center bg-primary py-2 sm:py-4 px-6'>
+            <nav className='fixed top-0 left-0 right-0 flex items-center gap-6 justify-start md:justify-center bg-primary py-2 sm:py-4 px-6'>
                 <button className='sm:hidden' onClick={toggleDrawer}>
-                    icon
+                    <MdDehaze size={24} />
                 </button>
-                <ul className='flex gap-4 items-center' tabIndex={drawerOpen ? -1 : undefined}>
+                <ul className='flex gap-4 items-center' tabIndex={drawerOpen ? -1 : 0}>
                     <li>
-                        <Link className='border-2 rounded-md p-1 font-bold hover:no-underline' href={"/"}>CODARSE</Link>
+                        <Link className='border-2 rounded-md p-1 font-bold hover:no-underline outline-offset-4' href={"/"}>CODARSE</Link>
                     </li>
                     <li className='hidden sm:block'>
-                        <Link href={"/"} data-active={currentPath === "/"} className='data-[active=true]:underline' >Página inicial</Link>
+                        <Link href={"/"} data-active={currentPath === "/"} className='data-[active=true]:underline outline-offset-4' >Página inicial</Link>
                     </li>
                     <li className='hidden sm:block'>
-                        <Link href={"/cursos"} data-active={currentPath === "/cursos"} className='data-[active=true]:underline'>Cursos</Link>
+                        <Link href={"/cursos"} data-active={currentPath === "/cursos"} className='data-[active=true]:underline outline-offset-4'>Cursos</Link>
                     </li>
                     <li className='hidden sm:block'>
-                        <Link href={"https://blog.codarse.com"} target='_blank' className='flex gap-1 items-center'>
+                        <Link href={"https://blog.codarse.com"} target='_blank' className='flex gap-1 items-center outline-offset-4'>
                             Blog
-                            B
+                            <MdOpenInNew size={24} />
                         </Link>
                     </li>
                 </ul>
@@ -56,16 +68,17 @@ export const Header = () => {
                         <li className=''>
                             <Link href={"https://blog.codarse.com"} target='_blank' className='flex gap-1 items-center'>
                                 Blog
-                                B
+                                <MdOpenInNew size={24} />
                             </Link>
                         </li>
                     </ul>
                 </div>
 
-                <h1 className='sm:hidden'>
+                <h1 className='sm:hidden line-clamp-1'>
                     {title}
                 </h1>
             </nav>
+            <div className='h-14 sm:h-[72px]' />
         </header>
     );
 };
