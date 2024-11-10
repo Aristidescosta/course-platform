@@ -20,7 +20,7 @@ export const Card: React.FC<ICardProps> = ({ image, description, href, title }) 
                     width={1000}
                     height={0}
                     draggable={false}
-                    className='aspect-video object-cover rounded-2xl'
+                    className='aspect-video object-cover rounded sm:rounded-2xl'
                 />
                 <h4 className='line-clamp-2 font-extrabold text-lg'>{title}</h4>
                 <p className='line-clamp-3'>{description}</p>
