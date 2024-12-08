@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 function page() {
     return (
         <main className="mt-8 flex justify-center">
-            <div className="min-[880px]:max-w-[880px]">
+            <div className="w-full min-[880px]:max-w-[880px]">
                 <Section
                     title='Todos os cursos'
                     variant='grid'
@@ -18,7 +18,7 @@ function page() {
                       Curso de NodeJS e Typescript iniciante. Esse curso é focado nas principais conceitos de um backend para crud. Vamos trabalhar com paginação, filtro, banco de dados sql, query builders, typescript e muito mais. É a porta de entrada para o mundo do Node JS no backend.\n\n#CODARSE
                       `,
                         image: "https://i.ytimg.com/vi/SVepTuBK4V0/hqdefault.jpg",
-                        href: "/cursos/123"
+                        href: `/cursos/${222}`
                       },
                       {
                         title: "🏆 Curso de API Rest, Node e Typescript",
@@ -26,7 +26,7 @@ function page() {
                       Curso de NodeJS e Typescript iniciante. Esse curso é focado nas principais conceitos de um backend para crud. Vamos trabalhar com paginação, filtro, banco de dados sql, query builders, typescript e muito mais. É a porta de entrada para o mundo do Node JS no backend.\n\n#CODARSE
                       `,
                         image: "https://i.ytimg.com/vi/SVepTuBK4V0/hqdefault.jpg",
-                        href: "/cursos/123"
+                        href: `/cursos/${222}`
                       },
                       {
                         title: "🏆 Curso de API Rest, Node e Typescript",
@@ -34,7 +34,7 @@ function page() {
                       Curso de NodeJS e Typescript iniciante. Esse curso é focado nas principais conceitos de um backend para crud. Vamos trabalhar com paginação, filtro, banco de dados sql, query builders, typescript e muito mais. É a porta de entrada para o mundo do Node JS no backend.\n\n#CODARSE
                       `,
                         image: "https://i.ytimg.com/vi/SVepTuBK4V0/hqdefault.jpg",
-                        href: "/cursos/123"
+                        href: `/cursos/${222}`
                       },
                       {
                         title: "🏆 Curso de API Rest, Node e Typescript",
@@ -42,7 +42,7 @@ function page() {
                       Curso de NodeJS e Typescript iniciante. Esse curso é focado nas principais conceitos de um backend para crud. Vamos trabalhar com paginação, filtro, banco de dados sql, query builders, typescript e muito mais. É a porta de entrada para o mundo do Node JS no backend.\n\n#CODARSE
                       `,
                         image: "https://i.ytimg.com/vi/SVepTuBK4V0/hqdefault.jpg",
-                        href: "/cursos/123"
+                        href: `/cursos/${222}`
                       },
                       {
                         title: "🏆 Curso de API Rest, Node e Typescript",
@@ -50,7 +50,7 @@ function page() {
                       Curso de NodeJS e Typescript iniciante. Esse curso é focado nas principais conceitos de um backend para crud. Vamos trabalhar com paginação, filtro, banco de dados sql, query builders, typescript e muito mais. É a porta de entrada para o mundo do Node JS no backend.\n\n#CODARSE
                       `,
                         image: "https://i.ytimg.com/vi/SVepTuBK4V0/hqdefault.jpg",
-                        href: "/cursos/123"
+                        href: `/cursos/${222}`
                       },]}
                 />
             </div>

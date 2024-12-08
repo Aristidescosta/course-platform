@@ -7,7 +7,7 @@ const config: Config = {
       colors: {
         text: "var(--color-text)",
         error: "var(--color-error)",
-        paper: "var(--color-primary)",
+        paper: "var(--color-paper)",
         primary: "var(--color-primary)",
         background: "var(--color-background)",
         'primary-contrast': "var(--color-primary-contrast)",

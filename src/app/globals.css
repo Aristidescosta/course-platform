@@ -11,42 +11,42 @@
     --color-primary-contrast: #ffffff;
 }
 
-*{
+* {
     @apply outline-primary outline-1 -outline-offset-2
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
     @apply h-3 w-2;
 }
 
-*::-webkit-scrollbar-button{
+*::-webkit-scrollbar-button {
     @apply hidden;
 }
 
-*::-webkit-scrollbar-corner{
+*::-webkit-scrollbar-corner {
     @apply bg-transparent;
 }
 
-*::-webkit-scrollbar-thumb{
+*::-webkit-scrollbar-thumb {
     @apply rounded-full bg-paper;
 }
 
-*::-webkit-scrollbar-track{
+*::-webkit-scrollbar-track {
     @apply bg-transparent;
 }
 
 
 
 html[light] {
-    --color-text: #000000;
+    --color-text: #fff;
     --color-error: #980000;
-    --color-paper: #ffffff;
+    --color-paper: #232323;
     --color-primary: #009688;
-    --color-background: #cacaca;
-    --color-primary-contrast: #ffffff;
+    --color-background: #000;
+    --color-primary-contrast: #fff;
 }
 
-a{
+a {
     @apply hover:underline active:opacity-50 transition-opacity;
 }
 
