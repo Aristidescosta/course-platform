@@ -11,6 +11,8 @@ export const CourseHeader = () => {
             <div className='flex gap-2 items-center'>
                 <Button
                     title="Compartilhar"
+                    content='https://www.youtube.com/watch?v=cVKywKMHmC8&list=PL29TaWXah3iaKcSxmOa_e_bKCkS10Rsn-&index=23'
+                    copyTitle='Copie o conteúdo abaixo'
                 />
                 <span>48 aulas</span>
             </div>
